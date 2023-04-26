@@ -14,18 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Home';
-});
-
-Route::prefix('/company')->group(function () {
-    
-    Route::get('/about_us/{id}', function ($id) {
-        return 'About us: '.$id;
-        //return request()->segment(2); //Obtener segmento del url
-    });
-
-    Route::get('/contact', function () {
-        return 'Contact';
-    });
-
+    return view('welcome');
 });
